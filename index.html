@@ -58,34 +58,17 @@
 
 
     <div id="integrated-terminal">
+        <!-- Add This 👇 -->
         <script>
-            window.Jupiter.init({ enableWalletPassthrough: true });
-            displayMode: "integrated",
+            window.Jupiter.init({
+                displayMode: "integrated",
                 integratedTargetId: "integrated-terminal",
-                    endpoint: "https://sparkling-tiniest-flower.solana-mainnet.quiknode.pro/8cfd35a437211d2ff0f57070fa61d8636e87be43/",
-                        strictTokenList: false,
-                            defaultExplorer: "Solscan",
-                                formProps: {
-                fixedOutputMint: true,
-                    fixedAmount: true,
-                        initialAmount: "1",
-                            initialInputMint: "So11111111111111111111111111111111111111112",
-                                initialOutputMint: "",
-                                    initialSlippageBps: 50,
-                },
+                // 👇 REPLACE THIS WITH YOUR OWN HTTP PROVIDER ENDPOINT
+                endpoint: "https://example.solana-mainnet.quiknode.pro/123456/",
+                formProps: {
+                    fixedOutputMint: false
+                }
             });
-            const App = () => {
-                const { wallet } = useWallet();
-
-                const initJupiter = () => {
-                    if (wallet) {
-                        window.Jupiter.init({
-                            endpoint,
-                            // 👇 USE YOUR DAPP'S EXISTING WALLET PROVIDER
-                            passThroughWallet: wallet,
-                        }
-            });
-
         </script>
         <center>
             <img id=img-logo
