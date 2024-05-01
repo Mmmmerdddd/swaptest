@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurbyWifHat </title>
+    <script src="https://terminal.jup.ag/main-v2.js" data-preload></script>
+    <style>
+        body {
+            display: 80%;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #D757DE;
+        }
+
+        h1 {
+            padding: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        h2 {
+            padding: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+        #integrated-terminal {
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #c111ca;
+
+
+        }
+
+        #img-logo {
+            width: 250px;
+            height: auto;
+            align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>SWAP</h1>
+        <center>
+            <h2>YOUR FURBY'S NOW
+        </center>
+        </h2>
+    </center>
+
+
+    <div id="integrated-terminal">
+        <script>
+            window.Jupiter.init({ enableWalletPassthrough: true });
+            displayMode: "integrated",
+                integratedTargetId: "integrated-terminal",
+                    endpoint: "https://sparkling-tiniest-flower.solana-mainnet.quiknode.pro/8cfd35a437211d2ff0f57070fa61d8636e87be43/",
+                        strictTokenList: false,
+                            defaultExplorer: "Solscan",
+                                formProps: {
+                fixedOutputMint: true,
+                    fixedAmount: true,
+                        initialAmount: "1",
+                            initialInputMint: "So11111111111111111111111111111111111111112",
+                                initialOutputMint: "",
+                                    initialSlippageBps: 50,
+                },
+            });
+            const App = () => {
+                const { wallet } = useWallet();
+
+                const initJupiter = () => {
+                    if (wallet) {
+                        window.Jupiter.init({
+                            endpoint,
+                            // 👇 USE YOUR DAPP'S EXISTING WALLET PROVIDER
+                            passThroughWallet: wallet,
+                        }
+            });
+
+        </script>
+        <center>
+            <img id=img-logo
+                src='https://img1.wsimg.com/isteam/ip/318b3c74-0824-408d-a2eb-caf63d0c5de2/logo-removebg.png/:/cr=t:0%25,l:14.19%25,w:75%25,h:100%25/rs=w:800,h:1067,cg:tru'></img>
+
+            <h2>© 2024 FurbyWifHat Swap
+        </center>
+        </h2>
+    </div>
+    </br>
+</body>
+
+</html>
